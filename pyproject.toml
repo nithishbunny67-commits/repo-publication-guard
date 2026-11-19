@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-publication-guard"
+version = "0.1.1"
+description = "Dependency-free local checks for secrets and .env drift before publishing a repository"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Repo Publication Guard contributors"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance"
+]
+
+[project.scripts]
+repo-guard = "repo_publication_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
